@@ -1,0 +1,9 @@
+.vscode/**
+.vscode-test/**
+node_modules/**
+test/**
+media/gen_icon.js
+**/*.map
+**/*.ts
+.gitignore
+.yarnrc

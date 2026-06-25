@@ -1,0 +1,118 @@
+{
+  "name": "env-sync",
+  "displayName": "Env Sync — .env.example Generator & Validator",
+  "description": "Scan your codebase for environment variables and auto-generate .env.example files across 7 languages (JS, TS, Python, Go, Rust, Java, Ruby). Validate configs, catch drift, and never ship missing env vars again.",
+  "version": "0.1.0",
+  "publisher": "takeaseatventure",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/devforge/env-sync"
+  },
+  "engines": {
+    "vscode": "^1.74.0"
+  },
+  "categories": [
+    "Other",
+    "Programming Languages",
+    "Developer Tools"
+  ],
+  "keywords": [
+    "env",
+    "environment variables",
+    "dotenv",
+    "env.example",
+    "configuration",
+    "secrets",
+    "config generator",
+    "env sync",
+    "deploy",
+    "onboarding",
+    "polyglot",
+    "multi-language"
+  ],
+  "icon": "media/icon.png",
+  "activationEvents": [
+    "onCommand:envsync.generate",
+    "onCommand:envsync.validate",
+    "onCommand:envsync.diff",
+    "onCommand:envsync.scan",
+    "onCommand:envsync.exportReport"
+  ],
+  "main": "./extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "envsync.generate",
+        "title": "Env Sync: Generate .env.example"
+      },
+      {
+        "command": "envsync.validate",
+        "title": "Env Sync: Validate .env against .env.example"
+      },
+      {
+        "command": "envsync.diff",
+        "title": "Env Sync: Show Missing/Extra Variables"
+      },
+      {
+        "command": "envsync.scan",
+        "title": "Env Sync: Scan Current File"
+      },
+      {
+        "command": "envsync.exportReport",
+        "title": "Env Sync: Export Coverage Report (Pro)"
+      }
+    ],
+    "keybindings": [
+      {
+        "command": "envsync.generate",
+        "key": "ctrl+alt+g",
+        "mac": "cmd+alt+g"
+      },
+      {
+        "command": "envsync.validate",
+        "key": "ctrl+alt+v",
+        "mac": "cmd+alt+v"
+      },
+      {
+        "command": "envsync.diff",
+        "key": "ctrl+alt+e",
+        "mac": "cmd+alt+e"
+      },
+      {
+        "command": "envsync.scan",
+        "key": "ctrl+alt+c",
+        "mac": "cmd+alt+c"
+      }
+    ],
+    "configuration": {
+      "title": "Env Sync",
+      "properties": {
+        "envsync.outputFile": {
+          "type": "string",
+          "default": ".env.example",
+          "description": "Output file for generated environment variable documentation"
+        },
+        "envsync.includeComments": {
+          "type": "boolean",
+          "default": true,
+          "description": "Include file location comments next to each variable"
+        },
+        "envsync.excludeDirs": {
+          "type": "array",
+          "default": ["node_modules", ".git", "vendor", "dist", "build", ".next", "__pycache__", ".venv", "venv", "target", ".cache"],
+          "description": "Directories to exclude from scanning"
+        },
+        "envsync.scanExtensions": {
+          "type": "array",
+          "default": [".js", ".mjs", ".cjs", ".ts", ".mts", ".cts", ".jsx", ".tsx", ".py", ".java", ".rb", ".rs", ".go", ".sh"],
+          "description": "File extensions to scan for environment variable usage"
+        }
+      }
+    }
+  },
+  "scripts": {
+    "test": "node --test test/*.test.js"
+  },
+  "devDependencies": {}
+}

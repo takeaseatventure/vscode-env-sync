@@ -1,0 +1,22 @@
+{
+  "name": "devforge-license-client",
+  "version": "1.0.0",
+  "description": "Zero-dependency license validation client for VS Code and Chrome extensions",
+  "main": "index.js",
+  "scripts": {
+    "test": "node --test test/*.test.js"
+  },
+  "keywords": [
+    "license",
+    "license-key",
+    "pro-tier",
+    "vscode",
+    "extension",
+    "monetization"
+  ],
+  "author": "DevForge",
+  "license": "MIT",
+  "engines": {
+    "node": ">=16.0.0"
+  }
+}
