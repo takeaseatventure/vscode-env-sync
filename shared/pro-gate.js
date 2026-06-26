@@ -27,8 +27,8 @@
 const vscode = require('vscode');
 const { LicenseClient } = require('./license-client/index');
 
-const SERVER_URL = 'https://license.devforge.dev';
-const UPGRADE_URL = 'https://devforge.dev';
+const SERVER_URL = 'https://takeaseatventure.com';
+const UPGRADE_URL = 'https://takeaseatventure.com/pro';
 const SETTING_KEY = 'devforge.licenseKey';
 
 class ProGate {

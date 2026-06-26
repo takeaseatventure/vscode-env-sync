@@ -1,9 +1,9 @@
 {
-  "name": "env-sync",
-  "displayName": "Env Sync — .env.example Generator & Validator",
+  "name": "envsync-pro",
+  "displayName": "Env Sync Pro \u2014 .env.example Generator & Validator",
   "description": "Scan your codebase for environment variables and auto-generate .env.example files across 7 languages (JS, TS, Python, Go, Rust, Java, Ruby). Validate configs, catch drift, and never ship missing env vars again.",
   "version": "0.1.0",
-  "publisher": "takeaseatventure",
+  "publisher": "takeaseat-venture",
   "license": "MIT",
   "repository": {
     "type": "git",
@@ -13,9 +13,7 @@
     "vscode": "^1.74.0"
   },
   "categories": [
-    "Other",
-    "Programming Languages",
-    "Developer Tools"
+    "Other"
   ],
   "keywords": [
     "env",
@@ -100,12 +98,39 @@
         },
         "envsync.excludeDirs": {
           "type": "array",
-          "default": ["node_modules", ".git", "vendor", "dist", "build", ".next", "__pycache__", ".venv", "venv", "target", ".cache"],
+          "default": [
+            "node_modules",
+            ".git",
+            "vendor",
+            "dist",
+            "build",
+            ".next",
+            "__pycache__",
+            ".venv",
+            "venv",
+            "target",
+            ".cache"
+          ],
           "description": "Directories to exclude from scanning"
         },
         "envsync.scanExtensions": {
           "type": "array",
-          "default": [".js", ".mjs", ".cjs", ".ts", ".mts", ".cts", ".jsx", ".tsx", ".py", ".java", ".rb", ".rs", ".go", ".sh"],
+          "default": [
+            ".js",
+            ".mjs",
+            ".cjs",
+            ".ts",
+            ".mts",
+            ".cts",
+            ".jsx",
+            ".tsx",
+            ".py",
+            ".java",
+            ".rb",
+            ".rs",
+            ".go",
+            ".sh"
+          ],
           "description": "File extensions to scan for environment variable usage"
         }
       }
